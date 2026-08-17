@@ -1,22 +1,24 @@
-# VIDORA AI v1
+# VIDORA AI v2
 
-Android MVP for an AI video creation app.
+Первая собираемая версия Android-приложения VIDORA AI.
 
-## Included
-- Home screen
-- Video prompt editor
-- Style selection
-- 9:16 format
-- Generation progress demo
-- Video library
-- Credits/subscription placeholder
-- Backend endpoint placeholder via `BuildConfig.VIDORA_API_BASE_URL`
-- GitHub Actions workflow that builds a debug APK
+## Что есть
+- Главный экран
+- Создание видео по текстовой идее
+- Выбор стиля
+- 15/30/60 секунд
+- Вертикальный формат 9:16
+- Демонстрационный прогресс генерации
+- Библиотека проектов
+- Подготовленная точка для будущего backend API
 
-## Current status
-The generation flow is still DEMO mode. No provider API key is embedded in the Android app. The next stage is a secure backend that receives a prompt and returns a generated video URL.
+## Важно
+Текущая генерация демонстрационная. Настоящий AI будет подключён через защищённый backend, чтобы API-ключи не хранились в APK.
 
-## Build
-Open the project in Android Studio and sync Gradle. The project targets Android API 37 and uses Android Gradle Plugin 9.3.0.
+## Сборка через GitHub Actions
+1. Загрузите **содержимое этой папки** в корень GitHub-репозитория.
+2. Откройте **Actions → VIDORA AI Android Build**.
+3. Нажмите **Run workflow**.
+4. После успешной сборки откройте **Artifacts → vidora-debug-apk**.
 
-For a GitHub build, push the repository and open Actions -> Android build. The resulting `vidora-debug-apk` artifact can be downloaded from the workflow run.
+В этом проекте **не требуется gradlew**: GitHub Actions устанавливает Gradle 9.5 самостоятельно.
